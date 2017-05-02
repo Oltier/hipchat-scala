@@ -54,23 +54,23 @@ scalaVersion := "2.12.2"
 
 scalacOptions ++= Seq(
   "-encoding", "UTF-8", "-deprecation", "-unchecked", "-feature", //"-optimise",
-  "-Xmigration", "-Xfuture", //"–Xverify", "-Xcheck-null", "-Ystatistics",
-  "-Yinline-warnings", //"-Yinline",
-  "-Ywarn-dead-code", "-Ydead-code"
+  "-Xmigration", "-Xfuture" //"–Xverify", "-Xcheck-null", "-Ystatistics",
+  //"-Yinline-warnings" //"-Yinline",
+  //"-Ywarn-dead-code", "-Ydead-code"
 )
 
 javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.8", "-target", "1.8", "-Xlint:unchecked", "-Xlint:deprecation")
 
 libraryDependencies ++= Seq(
-  "ch.qos.logback"                % "logback-classic"       % "1.1.2",
-  "com.fasterxml.jackson.core"    % "jackson-core"          % "2.4.2",
-  "com.fasterxml.jackson.module"  %% "jackson-module-scala" % "2.4.2",
-  "net.databinder.dispatch"       %% "dispatch-core"        % "0.11.3",
-  "com.typesafe.akka"             %% "akka-actor"           % "2.3.6",
-  "joda-time"                     % "joda-time"             % "2.4",
-  "org.joda"                      % "joda-convert"          % "1.7",
+  "ch.qos.logback"                % "logback-classic"       % "1.2.3",
+  "com.fasterxml.jackson.core"    % "jackson-core"          % "2.8.8",
+  "com.fasterxml.jackson.module"  %% "jackson-module-scala" % "2.8.8",
+  "net.databinder.dispatch"       %% "dispatch-core"        % "0.12.0",
+  "com.typesafe.akka"             %% "akka-actor"           % "2.4.17",
+  "joda-time"                     % "joda-time"             % "2.9.7",
+  "org.joda"                      % "joda-convert"          % "1.2",
   "com.typesafe"                  % "config"                % "1.2.1",
-  "org.scalatest"                 %% "scalatest"            % "2.2.2"     % "test"
+  "org.scalatest"                 %% "scalatest"            % "3.0.1"     % "test"
 )
 
 mappings in(Compile, packageBin) ~= {
