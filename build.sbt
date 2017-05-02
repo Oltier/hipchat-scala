@@ -50,12 +50,7 @@ name := "hipchat-scala"
 
 version := "1.1"
 
-scalaVersion := "2.11.2"
-
-crossScalaVersions := Seq(
-  "2.11.2",
-  "2.10.4"
-)
+scalaVersion := "2.12.2"
 
 scalacOptions ++= Seq(
   "-encoding", "UTF-8", "-deprecation", "-unchecked", "-feature", //"-optimise",
@@ -64,7 +59,7 @@ scalacOptions ++= Seq(
   "-Ywarn-dead-code", "-Ydead-code"
 )
 
-javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.7", "-target", "1.7", "-Xlint:unchecked", "-Xlint:deprecation")
+javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.8", "-target", "1.8", "-Xlint:unchecked", "-Xlint:deprecation")
 
 libraryDependencies ++= Seq(
   "ch.qos.logback"                % "logback-classic"       % "1.1.2",
